@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
 
-const port = process.env.PORT||5000
+const port = process.env.PORT||5500
 const server = http.createServer(app)
 
 mongoose.connect(process.env.MONGODB_URL).then(()=>{
