@@ -1,8 +1,9 @@
 import tmdbConfig from "./tmdb.config.js";
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#default_import
+//https://medium.com/dailyjs/using-import-aliases-in-javascript-a0b46237601c
 const tmdbEndpoints={
   mediaList:({mediaType, mediaCategory,page})=>tmdbConfig.getUrl(
-    `${mediaType}/${mediaCategory}`, page
+    `${mediaType}/${mediaCategory}`, {page}
   ),
   mediaDetail:({mediaType, mediaId})=>tmdbConfig.getUrl(
     `${mediaType}/${mediaId}`
